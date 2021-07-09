@@ -32,8 +32,8 @@ Plug 'enricobacis/vim-airline-clock'
 call plug#end()
 
 " colorscheme
-colorscheme gruvbox
-set background=dark
+" colorscheme gruvbox
+" set background=dark
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
