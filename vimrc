@@ -28,12 +28,15 @@ Plug 'valloric/youcompleteme'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'enricobacis/vim-airline-clock'
+Plug 'tpope/vim-surround'
+Plug 'alvan/vim-closetag'
+Plug 'turbio/bracey.vim'
 
 call plug#end()
 
 " colorscheme
-" colorscheme gruvbox
-" set background=dark
+colorscheme gruvbox
+set background=dark
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
