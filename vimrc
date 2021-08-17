@@ -30,6 +30,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
+Plug 'junegunn/goyo.vim'
 Plug 'turbio/bracey.vim'
 
 call plug#end()
@@ -58,3 +59,12 @@ nnoremap <leader>l :wincmd l<CR>
 " BEST PART YCM
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
+
+" GOYO Toggle map
+map <C-g> :Goyo<CR>
+
+" timeout
+set timeout                                                                                                                                                               
+set ttimeout                                                                                                                                            
+set timeoutlen=2000                                                                                                                                                    
+set ttimeoutlen=100
