@@ -1,3 +1,6 @@
+if has('python3')          
+endif
+
 " Default settings
 
 syntax on
