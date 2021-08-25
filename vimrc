@@ -22,6 +22,8 @@ set incsearch
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
+Plug 'segeljakt/vim-silicon'
+Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
@@ -41,6 +43,14 @@ call plug#end()
 " colorscheme
 colorscheme gruvbox
 set background=dark
+
+" Carbon-now-sh
+vnoremap <F5> :CarbonNowSh<CR>
+let g:carbon_now_sh_options =
+\ { 'ln': 'true',
+  \ 'th': 'Synthwave',
+  \ 'fm': 'Source Code Pro' }
+let g:carbon_now_sh_browser = 'firefox'
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
@@ -67,7 +77,7 @@ nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 map <C-g> :Goyo<CR>
 
 " timeout
-set timeout                                                                                                                                                               
-set ttimeout                                                                                                                                            
-set timeoutlen=2000                                                                                                                                                    
+set timeout
+set ttimeout
+set timeoutlen=2000
 set ttimeoutlen=100
