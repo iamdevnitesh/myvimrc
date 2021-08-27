@@ -21,9 +21,14 @@ set incsearch
 
 call plug#begin('~/.vim/plugged')
 
+" Look & Feel
 Plug 'morhetz/gruvbox'
+Plug 'prettier/vim-prettier'
+Plug 'frazrepo/vim-rainbow'
+Plug 'ryanoasis/vim-devicons'
 Plug 'segeljakt/vim-silicon'
 Plug 'kristijanhusak/vim-carbon-now-sh'
+Plug 'suan/vim-instant-markdown'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
@@ -32,11 +37,17 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'valloric/youcompleteme'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'junegunn/goyo.vim'
 Plug 'turbio/bracey.vim'
+Plug 'potatoesmaster/i3-vim-syntax'
+Plug 'vim-python/python-syntax'
+Plug 'ap/vim-css-color'
+Plug 'junegunn/vim-emoji'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -75,6 +86,27 @@ nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
 " GOYO Toggle map
 map <C-g> :Goyo<CR>
+
+set splitbelow splitright
+
+" Remap splits navigation to just CTRL + hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Make adjusing split sizes a bit more friendly
+noremap <silent> <C-Left> :vertical resize +3<CR>
+noremap <silent> <C-Right> :vertical resize -3<CR>
+noremap <silent> <C-Up> :resize +3<CR>
+noremap <silent> <C-Down> :resize -3<CR>
+
+" Change 2 split windows from vert to horiz or horiz to vert
+map <Leader>th <C-w>t<C-w>H
+map <Leader>tk <C-w>t<C-w>K
+
+" Removes pipes | that act as seperators on splits
+set fillchars+=vert:\ 
 
 " timeout
 set timeout
