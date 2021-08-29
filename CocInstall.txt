@@ -1,0 +1,4 @@
+:CocInstall coc-sh coc-css coc-json coc-python coc-snippets coc-vimlsp coc-go coc-flutter coc-html coc-tsserver coc-json coc-markdownlint coc-rust-analyzer
+
+
+sudo pacman -S ccls
