@@ -1,4 +1,4 @@
-if has('python3')          
+if has('python3')
 endif
 
 " Default settings
@@ -28,13 +28,24 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'ryanoasis/vim-devicons'
 Plug 'segeljakt/vim-silicon'
 Plug 'kristijanhusak/vim-carbon-now-sh'
+Plug 'junegunn/goyo.vim'
+" Productivity
 Plug 'suan/vim-instant-markdown'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'ctrlpvim/ctrlp.vim'
-
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'enricobacis/vim-airline-clock'
+Plug 'tpope/vim-surround'
+Plug 'alvan/vim-closetag'
+Plug 'potatoesmaster/i3-vim-syntax'
+Plug 'vim-python/python-syntax'
+Plug 'junegunn/vim-emoji'
+Plug 'vimwiki/vimwiki'
 " Flutter
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/dartlang-snippets'
@@ -43,25 +54,24 @@ Plug 'natebosch/vim-lsc-dart'
 
 "COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'enricobacis/vim-airline-clock'
-Plug 'tpope/vim-surround'
-Plug 'alvan/vim-closetag'
-Plug 'junegunn/goyo.vim'
+
+" Web Development
 Plug 'turbio/bracey.vim'
-Plug 'potatoesmaster/i3-vim-syntax'
-Plug 'vim-python/python-syntax'
+Plug 'mattn/emmet-vim'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'ap/vim-css-color'
-Plug 'junegunn/vim-emoji'
-Plug 'vimwiki/vimwiki'
+Plug 'pangloss/vim-javascript'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
 
 " colorscheme
 colorscheme gruvbox
 set background=dark
+
+" airline theme
+let g:airline_theme='gruvbox'
 
 " Carbon-now-sh
 vnoremap <F5> :CarbonNowSh<CR>
@@ -122,7 +132,8 @@ set ttimeout
 set timeoutlen=2000
 set ttimeoutlen=100
 
-" ********************************************************************************COC************************************************************
+""""""""""""""""""""""""""""""""""""""COC CONFIG""""""""""""""""""""""""""""""""""""""
+
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
