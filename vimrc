@@ -22,7 +22,11 @@ set incsearch
 call plug#begin('~/.vim/plugged')
 
 " Look & Feel
+" COLORSCHEMES ->
 Plug 'morhetz/gruvbox'
+" Plug 'arcticicestudio/nord-vim'
+" Plug 'dylanaraps/wal.vim'
+
 Plug 'prettier/vim-prettier'
 Plug 'frazrepo/vim-rainbow'
 Plug 'ryanoasis/vim-devicons'
@@ -66,12 +70,14 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
 
-" colorscheme
+" COLORSCHEMES APPLY ->
 colorscheme gruvbox
+" colorscheme nord
+" colorscheme wal
 set background=dark
 
 " airline theme
-let g:airline_theme='gruvbox'
+" let g:airline_theme='gruvbox'
 
 " Carbon-now-sh
 vnoremap <F5> :CarbonNowSh<CR>
